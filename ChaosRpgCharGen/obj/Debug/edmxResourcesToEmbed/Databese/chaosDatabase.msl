@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="chasDBStoreContainer" CdmEntityContainer="chaosDatabase">
+    <EntitySetMapping Name="chaos_discipline_type">
+      <EntityTypeMapping TypeName="chasDB.chaos_discipline_type">
+        <MappingFragment StoreEntitySet="chaos_discipline_type">
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="type_name" ColumnName="type_name" />
+          <ScalarProperty Name="type_inheritylBeneficial" ColumnName="type_inheritylBeneficial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_disciplines">
+      <EntityTypeMapping TypeName="chasDB.chaos_disciplines">
+        <MappingFragment StoreEntitySet="chaos_disciplines">
+          <ScalarProperty Name="discipl_id" ColumnName="discipl_id" />
+          <ScalarProperty Name="discipl_name" ColumnName="discipl_name" />
+          <ScalarProperty Name="discipl_type" ColumnName="discipl_type" />
+          <ScalarProperty Name="discipl_studyReqImprt" ColumnName="discipl_studyReqImprt" />
+          <ScalarProperty Name="discipl_studiab" ColumnName="discipl_studiab" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_JPLevels_normal">
+      <EntityTypeMapping TypeName="chasDB.chaos_JPLevels_normal">
+        <MappingFragment StoreEntitySet="chaos_JPLevels_normal">
+          <ScalarProperty Name="discipl_level" ColumnName="discipl_level" />
+          <ScalarProperty Name="level_attribJPSchemaAdditioner" ColumnName="level_attribJPSchemaAdditioner" />
+          <ScalarProperty Name="level_studyPracticePenalty" ColumnName="level_studyPracticePenalty" />
+          <ScalarProperty Name="discipl_levelAveragePrice" ColumnName="discipl_levelAveragePrice" />
+          <ScalarProperty Name="discipl_levelBeneficPrice" ColumnName="discipl_levelBeneficPrice" />
+          <ScalarProperty Name="discipl_attribLevelFeedback" ColumnName="discipl_attribLevelFeedback" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_JPLevels_special">
+      <EntityTypeMapping TypeName="chasDB.chaos_JPLevels_special">
+        <MappingFragment StoreEntitySet="chaos_JPLevels_special">
+          <ScalarProperty Name="discipl_specLevel" ColumnName="discipl_specLevel" />
+          <ScalarProperty Name="discipl_levelSpecAveragePrice" ColumnName="discipl_levelSpecAveragePrice" />
+          <ScalarProperty Name="discipl_levelSpecBenefPrice" ColumnName="discipl_levelSpecBenefPrice" />
+          <ScalarProperty Name="discipl_requirLevelRising" ColumnName="discipl_requirLevelRising" />
+          <ScalarProperty Name="discipl_requirAttribRising" ColumnName="discipl_requirAttribRising" />
+          <ScalarProperty Name="discipl_attribSpecLevelFeedback" ColumnName="discipl_attribSpecLevelFeedback" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_raceBase_attribRestraints">
+      <EntityTypeMapping TypeName="chasDB.chaos_raceBase_attribRestraints">
+        <MappingFragment StoreEntitySet="chaos_raceBase_attribRestraints">
+          <ScalarProperty Name="race_id" ColumnName="race_id" />
+          <ScalarProperty Name="raceName" ColumnName="raceName" />
+          <ScalarProperty Name="physiqueMax" ColumnName="physiqueMax" />
+          <ScalarProperty Name="efficiencyMax" ColumnName="efficiencyMax" />
+          <ScalarProperty Name="conscienceMax" ColumnName="conscienceMax" />
+          <ScalarProperty Name="essencyMax" ColumnName="essencyMax" />
+          <ScalarProperty Name="basicSize" ColumnName="basicSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_raceSizes">
+      <EntityTypeMapping TypeName="chasDB.chaos_raceSizes">
+        <MappingFragment StoreEntitySet="chaos_raceSizes">
+          <ScalarProperty Name="basicSize_id" ColumnName="basicSize_id" />
+          <ScalarProperty Name="sizeDescr" ColumnName="sizeDescr" />
+          <ScalarProperty Name="speedQuicknessBasic" ColumnName="speedQuicknessBasic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_chosenDiscipl">
+      <EntityTypeMapping TypeName="chasDB.character_chosenDiscipl">
+        <MappingFragment StoreEntitySet="character_chosenDiscipl">
+          <ScalarProperty Name="discipl_index" ColumnName="discipl_index" />
+          <ScalarProperty Name="charact_id" ColumnName="charact_id" />
+          <ScalarProperty Name="discipl_id" ColumnName="discipl_id" />
+          <ScalarProperty Name="discipl_chosenAttrib" ColumnName="discipl_chosenAttrib" />
+          <ScalarProperty Name="discipl_requirNormal" ColumnName="discipl_requirNormal" />
+          <ScalarProperty Name="discipl_notation" ColumnName="discipl_notation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_trunk">
+      <EntityTypeMapping TypeName="chasDB.character_trunk">
+        <MappingFragment StoreEntitySet="character_trunk">
+          <ScalarProperty Name="charact_id" ColumnName="charact_id" />
+          <ScalarProperty Name="race_id" ColumnName="race_id" />
+          <ScalarProperty Name="character_name" ColumnName="character_name" />
+          <ScalarProperty Name="character_descr" ColumnName="character_descr" />
+          <ScalarProperty Name="beneficial_discipl" ColumnName="beneficial_discipl" />
+          <ScalarProperty Name="character_realSize" ColumnName="character_realSize" />
+          <ScalarProperty Name="character_realSpeed" ColumnName="character_realSpeed" />
+          <ScalarProperty Name="character_basicJP" ColumnName="character_basicJP" />
+          <ScalarProperty Name="lastupdate_timestamp" ColumnName="lastupdate_timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

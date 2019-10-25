@@ -1,0 +1,98 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="chasDB" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityType Name="chaos_discipline_type">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="Int64" Nullable="false" />
+    <Property Name="type_name" Type="String" MaxLength="40" FixedLength="false" Unicode="false" />
+    <Property Name="type_inheritylBeneficial" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="chaos_disciplines">
+    <Key>
+      <PropertyRef Name="discipl_id" />
+    </Key>
+    <Property Name="discipl_id" Type="Int64" Nullable="false" />
+    <Property Name="discipl_name" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="discipl_type" Type="Int64" />
+    <Property Name="discipl_studyReqImprt" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+    <Property Name="discipl_studiab" Type="Binary" MaxLength="2147483647" FixedLength="false" />
+  </EntityType>
+  <EntityType Name="chaos_JPLevels_normal">
+    <Key>
+      <PropertyRef Name="discipl_level" />
+    </Key>
+    <Property Name="discipl_level" Type="Int64" Nullable="false" />
+    <Property Name="level_attribJPSchemaAdditioner" Type="Int64" />
+    <Property Name="level_studyPracticePenalty" Type="Int64" />
+    <Property Name="discipl_levelAveragePrice" Type="Int64" />
+    <Property Name="discipl_levelBeneficPrice" Type="Int64" />
+    <Property Name="discipl_attribLevelFeedback" Type="Int64" />
+  </EntityType>
+  <EntityType Name="chaos_JPLevels_special">
+    <Key>
+      <PropertyRef Name="discipl_specLevel" />
+    </Key>
+    <Property Name="discipl_specLevel" Type="Int64" Nullable="false" />
+    <Property Name="discipl_levelSpecAveragePrice" Type="Int64" />
+    <Property Name="discipl_levelSpecBenefPrice" Type="Int64" />
+    <Property Name="discipl_requirLevelRising" Type="Int64" />
+    <Property Name="discipl_requirAttribRising" Type="Int64" />
+    <Property Name="discipl_attribSpecLevelFeedback" Type="Int64" />
+  </EntityType>
+  <EntityType Name="chaos_raceBase_attribRestraints">
+    <Key>
+      <PropertyRef Name="race_id" />
+    </Key>
+    <Property Name="race_id" Type="Int64" Nullable="false" />
+    <Property Name="raceName" Type="String" MaxLength="15" FixedLength="false" Unicode="false" />
+    <Property Name="physiqueMax" Type="Int64" />
+    <Property Name="efficiencyMax" Type="Int64" />
+    <Property Name="conscienceMax" Type="Int64" />
+    <Property Name="essencyMax" Type="Int64" />
+    <Property Name="basicSize" Type="Int64" />
+  </EntityType>
+  <EntityType Name="chaos_raceSizes">
+    <Key>
+      <PropertyRef Name="basicSize_id" />
+    </Key>
+    <Property Name="basicSize_id" Type="Int64" Nullable="false" />
+    <Property Name="sizeDescr" Type="String" MaxLength="20" FixedLength="false" Unicode="false" />
+    <Property Name="speedQuicknessBasic" Type="Int64" />
+  </EntityType>
+  <EntityType Name="character_chosenDiscipl">
+    <Key>
+      <PropertyRef Name="discipl_index" />
+    </Key>
+    <Property Name="discipl_index" Type="Int64" Nullable="false" />
+    <Property Name="charact_id" Type="Int64" />
+    <Property Name="discipl_id" Type="Int64" />
+    <Property Name="discipl_chosenAttrib" Type="Int64" />
+    <Property Name="discipl_requirNormal" Type="Int64" />
+    <Property Name="discipl_notation" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+  </EntityType>
+  <EntityType Name="character_trunk">
+    <Key>
+      <PropertyRef Name="charact_id" />
+    </Key>
+    <Property Name="charact_id" Type="Int64" Nullable="false" />
+    <Property Name="race_id" Type="Int64" />
+    <Property Name="character_name" Type="String" MaxLength="30" FixedLength="false" Unicode="false" />
+    <Property Name="character_descr" Type="String" MaxLength="100" FixedLength="false" Unicode="false" />
+    <Property Name="beneficial_discipl" Type="Int64" />
+    <Property Name="character_realSize" Type="Int64" />
+    <Property Name="character_realSpeed" Type="Int64" />
+    <Property Name="character_basicJP" Type="Int64" />
+    <Property Name="lastupdate_timestamp" Type="DateTime" />
+  </EntityType>
+  <EntityContainer Name="chaosDatabase" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="chaos_discipline_type" EntityType="Self.chaos_discipline_type" />
+    <EntitySet Name="chaos_disciplines" EntityType="Self.chaos_disciplines" />
+    <EntitySet Name="chaos_JPLevels_normal" EntityType="Self.chaos_JPLevels_normal" />
+    <EntitySet Name="chaos_JPLevels_special" EntityType="Self.chaos_JPLevels_special" />
+    <EntitySet Name="chaos_raceBase_attribRestraints" EntityType="Self.chaos_raceBase_attribRestraints" />
+    <EntitySet Name="chaos_raceSizes" EntityType="Self.chaos_raceSizes" />
+    <EntitySet Name="character_chosenDiscipl" EntityType="Self.character_chosenDiscipl" />
+    <EntitySet Name="character_trunk" EntityType="Self.character_trunk" />
+  </EntityContainer>
+</Schema>

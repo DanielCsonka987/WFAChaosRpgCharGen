@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="mainModelDB.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=C:\Users\AdminDaniel\source\repos\ChaosRpgCharGen\ChaosRpgCharGen\chaos_database_forCsharp.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="chaos_attrib_JPschema">
+    <Key>
+      <PropertyRef Name="schema_key" />
+    </Key>
+    <Property Name="schema_key" Type="integer" Nullable="false" />
+    <Property Name="JPschema" Type="integer" />
+    <Property Name="levelJP_intervalDown" Type="integer" />
+    <Property Name="levelJP_intervalUp" Type="integer" />
+    <Property Name="levelJP_modifier" Type="integer" />
+  </EntityType>
+  <EntityType Name="chaos_attribute_stats">
+    <Key>
+      <PropertyRef Name="attrib_id" />
+    </Key>
+    <Property Name="attrib_id" Type="integer" Nullable="false" />
+    <Property Name="atrib_name" Type="varchar" MaxLength="30" />
+  </EntityType>
+  <EntityType Name="chaos_discipline_attribute">
+    <Key>
+      <PropertyRef Name="dscpattrib_key" />
+    </Key>
+    <Property Name="dscpattrib_key" Type="integer" Nullable="false" />
+    <Property Name="discipl_id" Type="integer" />
+    <Property Name="discipl_attribId" Type="integer" />
+    <Property Name="discipl_JPschema" Type="integer" />
+  </EntityType>
+  <EntityType Name="chaos_discipline_requrement">
+    <Key>
+      <PropertyRef Name="requir_key" />
+    </Key>
+    <Property Name="requir_key" Type="integer" Nullable="false" />
+    <Property Name="discipl_id" Type="integer" />
+    <Property Name="discipl_requirNormGroup" Type="integer" />
+    <Property Name="discipl_requirId" Type="integer" />
+    <Property Name="discipl_requirTypeDef" Type="blob" />
+  </EntityType>
+  <EntityType Name="chaos_discipline_specAreas">
+    <Key>
+      <PropertyRef Name="dscpspecarea_key" />
+    </Key>
+    <Property Name="dscpspecarea_key" Type="integer" Nullable="false" />
+    <Property Name="discipl_id" Type="integer" />
+    <Property Name="spec_areaGroup" Type="integer" />
+    <Property Name="spec_areaDescr" Type="varchar" MaxLength="45" />
+  </EntityType>
+  <EntityType Name="chaos_discipline_specialis">
+    <Key>
+      <PropertyRef Name="dscpspec_key" />
+    </Key>
+    <Property Name="dscpspec_key" Type="integer" Nullable="false" />
+    <Property Name="discipl_id" Type="integer" />
+    <Property Name="discipl_specialReqGroup" Type="integer" />
+    <Property Name="discipl_specialReqId" Type="varchar" MaxLength="3" />
+    <Property Name="discipl_specialLevel" Type="integer" />
+    <Property Name="discipl_specialThisMustRise" Type="blob" />
+    <Property Name="spec_requestIType" Type="integer" />
+  </EntityType>
+  <EntityType Name="chaos_discipline_type">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="integer" Nullable="false" />
+    <Property Name="type_name" Type="varchar" MaxLength="40" />
+    <Property Name="type_inheritylBeneficial" Type="blob" />
+  </EntityType>
+  <EntityType Name="chaos_disciplines">
+    <Key>
+      <PropertyRef Name="discipl_id" />
+    </Key>
+    <Property Name="discipl_id" Type="integer" Nullable="false" />
+    <Property Name="discipl_name" Type="varchar" MaxLength="100" />
+    <Property Name="discipl_type" Type="integer" />
+    <Property Name="discipl_studyReqImprt" Type="blob" />
+    <Property Name="discipl_studiab" Type="blob" />
+  </EntityType>
+  <EntityType Name="chaos_JPLevels_normal">
+    <Key>
+      <PropertyRef Name="discipl_level" />
+    </Key>
+    <Property Name="discipl_level" Type="integer" Nullable="false" />
+    <Property Name="level_attribJPSchemaAdditioner" Type="integer" />
+    <Property Name="level_studyPracticePenalty" Type="integer" />
+    <Property Name="discipl_levelAveragePrice" Type="integer" />
+    <Property Name="discipl_levelBeneficPrice" Type="integer" />
+    <Property Name="discipl_attribLevelFeedback" Type="integer" />
+  </EntityType>
+  <EntityType Name="chaos_JPLevels_special">
+    <Key>
+      <PropertyRef Name="discipl_specLevel" />
+    </Key>
+    <Property Name="discipl_specLevel" Type="integer" Nullable="false" />
+    <Property Name="discipl_levelSpecAveragePrice" Type="integer" />
+    <Property Name="discipl_levelSpecBenefPrice" Type="integer" />
+    <Property Name="discipl_requirLevelRising" Type="integer" />
+    <Property Name="discipl_requirAttribRising" Type="integer" />
+    <Property Name="discipl_attribSpecLevelFeedback" Type="integer" />
+  </EntityType>
+  <EntityType Name="chaos_raceBase_attribRestraints">
+    <Key>
+      <PropertyRef Name="race_id" />
+    </Key>
+    <Property Name="race_id" Type="integer" Nullable="false" />
+    <Property Name="raceName" Type="varchar" MaxLength="15" />
+    <Property Name="physiqueMax" Type="integer" />
+    <Property Name="efficiencyMax" Type="integer" />
+    <Property Name="conscienceMax" Type="integer" />
+    <Property Name="essencyMax" Type="integer" />
+    <Property Name="basicSize" Type="integer" />
+  </EntityType>
+  <EntityType Name="chaos_raceSizes">
+    <Key>
+      <PropertyRef Name="basicSize_id" />
+    </Key>
+    <Property Name="basicSize_id" Type="integer" Nullable="false" />
+    <Property Name="sizeDescr" Type="varchar" MaxLength="20" />
+    <Property Name="speedQuicknessBasic" Type="integer" />
+  </EntityType>
+  <EntityType Name="character_attribEnchance">
+    <Key>
+      <PropertyRef Name="attribEchnance_key" />
+    </Key>
+    <Property Name="attribEchnance_key" Type="integer" Nullable="false" />
+    <Property Name="charact_id" Type="integer" />
+    <Property Name="attrib_echanceIndex" Type="integer" />
+    <Property Name="discipl_index1" Type="integer" />
+    <Property Name="discipl_index2" Type="integer" />
+    <Property Name="attrib_id" Type="integer" />
+    <Property Name="discipl_pointFeedbackType" Type="integer" />
+    <Property Name="discipl_pointFromSpec" Type="blob" />
+  </EntityType>
+  <EntityType Name="character_attribStats">
+    <Key>
+      <PropertyRef Name="attriStat_key" />
+    </Key>
+    <Property Name="attriStat_key" Type="integer" Nullable="false" />
+    <Property Name="charact_id" Type="integer" />
+    <Property Name="attrib_id" Type="integer" />
+    <Property Name="attrib_basicPoint" Type="integer" />
+  </EntityType>
+  <EntityType Name="character_chosenDiscipl">
+    <Key>
+      <PropertyRef Name="discipl_index" />
+    </Key>
+    <Property Name="discipl_index" Type="integer" Nullable="false" />
+    <Property Name="charact_id" Type="integer" />
+    <Property Name="discipl_id" Type="integer" />
+    <Property Name="discipl_chosenAttrib" Type="integer" />
+    <Property Name="discipl_requirNormal" Type="integer" />
+    <Property Name="discipl_notation" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="character_chosenLevel">
+    <Key>
+      <PropertyRef Name="chosenLevel_key" />
+    </Key>
+    <Property Name="chosenLevel_key" Type="integer" Nullable="false" />
+    <Property Name="discipl_index" Type="integer" />
+    <Property Name="discipl_level" Type="integer" />
+    <Property Name="discipl_levelFinalJP" Type="integer" />
+    <Property Name="discipl_metorated" Type="blob" />
+    <Property Name="discipl_hasThereAttrPointFromThis" Type="blob" />
+    <Property Name="discipl_isThisPointSpend" Type="blob" />
+  </EntityType>
+  <EntityType Name="character_chosenSpec">
+    <Key>
+      <PropertyRef Name="chosenSpecLevel_key" />
+    </Key>
+    <Property Name="chosenSpecLevel_key" Type="integer" Nullable="false" />
+    <Property Name="discipl_index" Type="integer" />
+    <Property Name="discipl_requirSpec" Type="integer" />
+    <Property Name="discipl_specialAreaGroup" Type="integer" />
+    <Property Name="discipl_specialDescr" Type="varchar" MaxLength="100" />
+    <Property Name="discipl_level" Type="integer" />
+    <Property Name="discipl_levelFinalJP" Type="integer" />
+    <Property Name="discipl_hasThereAttrPointFromThis" Type="blob" />
+  </EntityType>
+  <EntityType Name="character_collectJP">
+    <Key>
+      <PropertyRef Name="collectjp_key" />
+    </Key>
+    <Property Name="collectjp_key" Type="integer" Nullable="false" />
+    <Property Name="charact_id" Type="integer" />
+    <Property Name="jp_index" Type="integer" />
+    <Property Name="character_collectedJP" Type="integer" />
+  </EntityType>
+  <EntityType Name="character_trunk">
+    <Key>
+      <PropertyRef Name="charact_id" />
+    </Key>
+    <Property Name="charact_id" Type="integer" Nullable="false" />
+    <Property Name="race_id" Type="integer" />
+    <Property Name="character_name" Type="varchar" MaxLength="30" />
+    <Property Name="character_descr" Type="varchar" MaxLength="100" />
+    <Property Name="beneficial_discipl" Type="integer" />
+    <Property Name="character_realSize" Type="integer" />
+    <Property Name="character_realSpeed" Type="integer" />
+    <Property Name="character_basicJP" Type="integer" />
+    <Property Name="lastupdate_timestamp" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="mainModelDBStoreContainer">
+    <EntitySet Name="chaos_attrib_JPschema" EntityType="Self.chaos_attrib_JPschema" store:Type="Tables" />
+    <EntitySet Name="chaos_attribute_stats" EntityType="Self.chaos_attribute_stats" store:Type="Tables" />
+    <EntitySet Name="chaos_discipline_attribute" EntityType="Self.chaos_discipline_attribute" store:Type="Tables" />
+    <EntitySet Name="chaos_discipline_requrement" EntityType="Self.chaos_discipline_requrement" store:Type="Tables" />
+    <EntitySet Name="chaos_discipline_specAreas" EntityType="Self.chaos_discipline_specAreas" store:Type="Tables" />
+    <EntitySet Name="chaos_discipline_specialis" EntityType="Self.chaos_discipline_specialis" store:Type="Tables" />
+    <EntitySet Name="chaos_discipline_type" EntityType="Self.chaos_discipline_type" store:Type="Tables" />
+    <EntitySet Name="chaos_disciplines" EntityType="Self.chaos_disciplines" store:Type="Tables" />
+    <EntitySet Name="chaos_JPLevels_normal" EntityType="Self.chaos_JPLevels_normal" store:Type="Tables" />
+    <EntitySet Name="chaos_JPLevels_special" EntityType="Self.chaos_JPLevels_special" store:Type="Tables" />
+    <EntitySet Name="chaos_raceBase_attribRestraints" EntityType="Self.chaos_raceBase_attribRestraints" store:Type="Tables" />
+    <EntitySet Name="chaos_raceSizes" EntityType="Self.chaos_raceSizes" store:Type="Tables" />
+    <EntitySet Name="character_attribEnchance" EntityType="Self.character_attribEnchance" store:Type="Tables" />
+    <EntitySet Name="character_attribStats" EntityType="Self.character_attribStats" store:Type="Tables" />
+    <EntitySet Name="character_chosenDiscipl" EntityType="Self.character_chosenDiscipl" store:Type="Tables" />
+    <EntitySet Name="character_chosenLevel" EntityType="Self.character_chosenLevel" store:Type="Tables" />
+    <EntitySet Name="character_chosenSpec" EntityType="Self.character_chosenSpec" store:Type="Tables" />
+    <EntitySet Name="character_collectJP" EntityType="Self.character_collectJP" store:Type="Tables" />
+    <EntitySet Name="character_trunk" EntityType="Self.character_trunk" store:Type="Tables" />
+  </EntityContainer>
+</Schema>

@@ -1,0 +1,222 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="mainModelDBStoreContainer" CdmEntityContainer="mainEntities9">
+    <EntitySetMapping Name="chaos_attrib_JPschema">
+      <EntityTypeMapping TypeName="mainModelDB.chaos_attrib_JPschema">
+        <MappingFragment StoreEntitySet="chaos_attrib_JPschema">
+          <ScalarProperty Name="schema_key" ColumnName="schema_key" />
+          <ScalarProperty Name="JPschema" ColumnName="JPschema" />
+          <ScalarProperty Name="levelJP_intervalDown" ColumnName="levelJP_intervalDown" />
+          <ScalarProperty Name="levelJP_intervalUp" ColumnName="levelJP_intervalUp" />
+          <ScalarProperty Name="levelJP_modifier" ColumnName="levelJP_modifier" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_attribute_stats">
+      <EntityTypeMapping TypeName="mainModelDB.chaos_attribute_stats">
+        <MappingFragment StoreEntitySet="chaos_attribute_stats">
+          <ScalarProperty Name="attrib_id" ColumnName="attrib_id" />
+          <ScalarProperty Name="atrib_name" ColumnName="atrib_name" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_discipline_attribute">
+      <EntityTypeMapping TypeName="mainModelDB.chaos_discipline_attribute">
+        <MappingFragment StoreEntitySet="chaos_discipline_attribute">
+          <ScalarProperty Name="dscpattrib_key" ColumnName="dscpattrib_key" />
+          <ScalarProperty Name="discipl_id" ColumnName="discipl_id" />
+          <ScalarProperty Name="discipl_attribId" ColumnName="discipl_attribId" />
+          <ScalarProperty Name="discipl_JPschema" ColumnName="discipl_JPschema" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_discipline_requrement">
+      <EntityTypeMapping TypeName="mainModelDB.chaos_discipline_requrement">
+        <MappingFragment StoreEntitySet="chaos_discipline_requrement">
+          <ScalarProperty Name="requir_key" ColumnName="requir_key" />
+          <ScalarProperty Name="discipl_id" ColumnName="discipl_id" />
+          <ScalarProperty Name="discipl_requirNormGroup" ColumnName="discipl_requirNormGroup" />
+          <ScalarProperty Name="discipl_requirId" ColumnName="discipl_requirId" />
+          <ScalarProperty Name="discipl_requirTypeDef" ColumnName="discipl_requirTypeDef" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_discipline_specAreas">
+      <EntityTypeMapping TypeName="mainModelDB.chaos_discipline_specAreas">
+        <MappingFragment StoreEntitySet="chaos_discipline_specAreas">
+          <ScalarProperty Name="dscpspecarea_key" ColumnName="dscpspecarea_key" />
+          <ScalarProperty Name="discipl_id" ColumnName="discipl_id" />
+          <ScalarProperty Name="spec_areaGroup" ColumnName="spec_areaGroup" />
+          <ScalarProperty Name="spec_areaDescr" ColumnName="spec_areaDescr" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_discipline_specialis">
+      <EntityTypeMapping TypeName="mainModelDB.chaos_discipline_specialis">
+        <MappingFragment StoreEntitySet="chaos_discipline_specialis">
+          <ScalarProperty Name="dscpspec_key" ColumnName="dscpspec_key" />
+          <ScalarProperty Name="discipl_id" ColumnName="discipl_id" />
+          <ScalarProperty Name="discipl_specialReqGroup" ColumnName="discipl_specialReqGroup" />
+          <ScalarProperty Name="discipl_specialReqId" ColumnName="discipl_specialReqId" />
+          <ScalarProperty Name="discipl_specialLevel" ColumnName="discipl_specialLevel" />
+          <ScalarProperty Name="discipl_specialThisMustRise" ColumnName="discipl_specialThisMustRise" />
+          <ScalarProperty Name="spec_requestIType" ColumnName="spec_requestIType" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_discipline_type">
+      <EntityTypeMapping TypeName="mainModelDB.chaos_discipline_type">
+        <MappingFragment StoreEntitySet="chaos_discipline_type">
+          <ScalarProperty Name="type_id" ColumnName="type_id" />
+          <ScalarProperty Name="type_name" ColumnName="type_name" />
+          <ScalarProperty Name="type_inheritylBeneficial" ColumnName="type_inheritylBeneficial" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_disciplines">
+      <EntityTypeMapping TypeName="mainModelDB.chaos_disciplines">
+        <MappingFragment StoreEntitySet="chaos_disciplines">
+          <ScalarProperty Name="discipl_id" ColumnName="discipl_id" />
+          <ScalarProperty Name="discipl_name" ColumnName="discipl_name" />
+          <ScalarProperty Name="discipl_type" ColumnName="discipl_type" />
+          <ScalarProperty Name="discipl_studyReqImprt" ColumnName="discipl_studyReqImprt" />
+          <ScalarProperty Name="discipl_studiab" ColumnName="discipl_studiab" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_JPLevels_normal">
+      <EntityTypeMapping TypeName="mainModelDB.chaos_JPLevels_normal">
+        <MappingFragment StoreEntitySet="chaos_JPLevels_normal">
+          <ScalarProperty Name="discipl_level" ColumnName="discipl_level" />
+          <ScalarProperty Name="level_attribJPSchemaAdditioner" ColumnName="level_attribJPSchemaAdditioner" />
+          <ScalarProperty Name="level_studyPracticePenalty" ColumnName="level_studyPracticePenalty" />
+          <ScalarProperty Name="discipl_levelAveragePrice" ColumnName="discipl_levelAveragePrice" />
+          <ScalarProperty Name="discipl_levelBeneficPrice" ColumnName="discipl_levelBeneficPrice" />
+          <ScalarProperty Name="discipl_attribLevelFeedback" ColumnName="discipl_attribLevelFeedback" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_JPLevels_special">
+      <EntityTypeMapping TypeName="mainModelDB.chaos_JPLevels_special">
+        <MappingFragment StoreEntitySet="chaos_JPLevels_special">
+          <ScalarProperty Name="discipl_specLevel" ColumnName="discipl_specLevel" />
+          <ScalarProperty Name="discipl_levelSpecAveragePrice" ColumnName="discipl_levelSpecAveragePrice" />
+          <ScalarProperty Name="discipl_levelSpecBenefPrice" ColumnName="discipl_levelSpecBenefPrice" />
+          <ScalarProperty Name="discipl_requirLevelRising" ColumnName="discipl_requirLevelRising" />
+          <ScalarProperty Name="discipl_requirAttribRising" ColumnName="discipl_requirAttribRising" />
+          <ScalarProperty Name="discipl_attribSpecLevelFeedback" ColumnName="discipl_attribSpecLevelFeedback" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_raceBase_attribRestraints">
+      <EntityTypeMapping TypeName="mainModelDB.chaos_raceBase_attribRestraints">
+        <MappingFragment StoreEntitySet="chaos_raceBase_attribRestraints">
+          <ScalarProperty Name="race_id" ColumnName="race_id" />
+          <ScalarProperty Name="raceName" ColumnName="raceName" />
+          <ScalarProperty Name="physiqueMax" ColumnName="physiqueMax" />
+          <ScalarProperty Name="efficiencyMax" ColumnName="efficiencyMax" />
+          <ScalarProperty Name="conscienceMax" ColumnName="conscienceMax" />
+          <ScalarProperty Name="essencyMax" ColumnName="essencyMax" />
+          <ScalarProperty Name="basicSize" ColumnName="basicSize" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="chaos_raceSizes">
+      <EntityTypeMapping TypeName="mainModelDB.chaos_raceSizes">
+        <MappingFragment StoreEntitySet="chaos_raceSizes">
+          <ScalarProperty Name="basicSize_id" ColumnName="basicSize_id" />
+          <ScalarProperty Name="sizeDescr" ColumnName="sizeDescr" />
+          <ScalarProperty Name="speedQuicknessBasic" ColumnName="speedQuicknessBasic" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_attribEnchance">
+      <EntityTypeMapping TypeName="mainModelDB.character_attribEnchance">
+        <MappingFragment StoreEntitySet="character_attribEnchance">
+          <ScalarProperty Name="attribEchnance_key" ColumnName="attribEchnance_key" />
+          <ScalarProperty Name="charact_id" ColumnName="charact_id" />
+          <ScalarProperty Name="attrib_echanceIndex" ColumnName="attrib_echanceIndex" />
+          <ScalarProperty Name="discipl_index1" ColumnName="discipl_index1" />
+          <ScalarProperty Name="discipl_index2" ColumnName="discipl_index2" />
+          <ScalarProperty Name="attrib_id" ColumnName="attrib_id" />
+          <ScalarProperty Name="discipl_pointFeedbackType" ColumnName="discipl_pointFeedbackType" />
+          <ScalarProperty Name="discipl_pointFromSpec" ColumnName="discipl_pointFromSpec" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_attribStats">
+      <EntityTypeMapping TypeName="mainModelDB.character_attribStats">
+        <MappingFragment StoreEntitySet="character_attribStats">
+          <ScalarProperty Name="attriStat_key" ColumnName="attriStat_key" />
+          <ScalarProperty Name="charact_id" ColumnName="charact_id" />
+          <ScalarProperty Name="attrib_id" ColumnName="attrib_id" />
+          <ScalarProperty Name="attrib_basicPoint" ColumnName="attrib_basicPoint" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_chosenDiscipl">
+      <EntityTypeMapping TypeName="mainModelDB.character_chosenDiscipl">
+        <MappingFragment StoreEntitySet="character_chosenDiscipl">
+          <ScalarProperty Name="discipl_index" ColumnName="discipl_index" />
+          <ScalarProperty Name="charact_id" ColumnName="charact_id" />
+          <ScalarProperty Name="discipl_id" ColumnName="discipl_id" />
+          <ScalarProperty Name="discipl_chosenAttrib" ColumnName="discipl_chosenAttrib" />
+          <ScalarProperty Name="discipl_requirNormal" ColumnName="discipl_requirNormal" />
+          <ScalarProperty Name="discipl_notation" ColumnName="discipl_notation" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_chosenLevel">
+      <EntityTypeMapping TypeName="mainModelDB.character_chosenLevel">
+        <MappingFragment StoreEntitySet="character_chosenLevel">
+          <ScalarProperty Name="chosenLevel_key" ColumnName="chosenLevel_key" />
+          <ScalarProperty Name="discipl_index" ColumnName="discipl_index" />
+          <ScalarProperty Name="discipl_level" ColumnName="discipl_level" />
+          <ScalarProperty Name="discipl_levelFinalJP" ColumnName="discipl_levelFinalJP" />
+          <ScalarProperty Name="discipl_metorated" ColumnName="discipl_metorated" />
+          <ScalarProperty Name="discipl_hasThereAttrPointFromThis" ColumnName="discipl_hasThereAttrPointFromThis" />
+          <ScalarProperty Name="discipl_isThisPointSpend" ColumnName="discipl_isThisPointSpend" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_chosenSpec">
+      <EntityTypeMapping TypeName="mainModelDB.character_chosenSpec">
+        <MappingFragment StoreEntitySet="character_chosenSpec">
+          <ScalarProperty Name="chosenSpecLevel_key" ColumnName="chosenSpecLevel_key" />
+          <ScalarProperty Name="discipl_index" ColumnName="discipl_index" />
+          <ScalarProperty Name="discipl_requirSpec" ColumnName="discipl_requirSpec" />
+          <ScalarProperty Name="discipl_specialAreaGroup" ColumnName="discipl_specialAreaGroup" />
+          <ScalarProperty Name="discipl_specialDescr" ColumnName="discipl_specialDescr" />
+          <ScalarProperty Name="discipl_level" ColumnName="discipl_level" />
+          <ScalarProperty Name="discipl_levelFinalJP" ColumnName="discipl_levelFinalJP" />
+          <ScalarProperty Name="discipl_hasThereAttrPointFromThis" ColumnName="discipl_hasThereAttrPointFromThis" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_collectJP">
+      <EntityTypeMapping TypeName="mainModelDB.character_collectJP">
+        <MappingFragment StoreEntitySet="character_collectJP">
+          <ScalarProperty Name="collectjp_key" ColumnName="collectjp_key" />
+          <ScalarProperty Name="charact_id" ColumnName="charact_id" />
+          <ScalarProperty Name="jp_index" ColumnName="jp_index" />
+          <ScalarProperty Name="character_collectedJP" ColumnName="character_collectedJP" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="character_trunk">
+      <EntityTypeMapping TypeName="mainModelDB.character_trunk">
+        <MappingFragment StoreEntitySet="character_trunk">
+          <ScalarProperty Name="charact_id" ColumnName="charact_id" />
+          <ScalarProperty Name="race_id" ColumnName="race_id" />
+          <ScalarProperty Name="character_name" ColumnName="character_name" />
+          <ScalarProperty Name="character_descr" ColumnName="character_descr" />
+          <ScalarProperty Name="beneficial_discipl" ColumnName="beneficial_discipl" />
+          <ScalarProperty Name="character_realSize" ColumnName="character_realSize" />
+          <ScalarProperty Name="character_realSpeed" ColumnName="character_realSpeed" />
+          <ScalarProperty Name="character_basicJP" ColumnName="character_basicJP" />
+          <ScalarProperty Name="lastupdate_timestamp" ColumnName="lastupdate_timestamp" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

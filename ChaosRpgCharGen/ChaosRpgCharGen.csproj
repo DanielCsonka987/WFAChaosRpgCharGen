@@ -1,0 +1,248 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{1DB7B62D-5A6C-421A-B95B-671F7E0E6518}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ChaosRpgCharGen</RootNamespace>
+    <AssemblyName>ChaosRpgCharGen</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+    <TargetFrameworkProfile />
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.2.0\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Design, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Design.dll</HintPath>
+    </Reference>
+    <Reference Include="MetroFramework.Fonts, Version=1.4.0.0, Culture=neutral, PublicKeyToken=5f91a84759bf584a, processorArchitecture=MSIL">
+      <HintPath>..\packages\MetroModernUI.1.4.0.0\lib\net\MetroFramework.Fonts.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.SQLite, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Core.1.0.111.0\lib\net46\System.Data.SQLite.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.EF6, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.EF6.1.0.111.0\lib\net46\System.Data.SQLite.EF6.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Data.SQLite.Linq, Version=1.0.111.0, Culture=neutral, PublicKeyToken=db937bc2d44ff139, processorArchitecture=MSIL">
+      <HintPath>..\packages\System.Data.SQLite.Linq.1.0.111.0\lib\net46\System.Data.SQLite.Linq.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.Security" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CharModel\CharDscpSurfaceNormal.cs" />
+    <Compile Include="CharModel\CharModelRepoException.cs" />
+    <Compile Include="CharModel\CharOneAttribEnch.cs" />
+    <Compile Include="CharModel\CharDscpLevel.cs" />
+    <Compile Include="CharModel\CharDscpSpecLevel.cs" />
+    <Compile Include="CharModel\CharOneAttrib.cs" />
+    <Compile Include="CharModel\CharOneDscp.cs" />
+    <Compile Include="CharModel\CharOneJPGain.cs" />
+    <Compile Include="CharModel\ICharOneDscp.cs" />
+    <Compile Include="CharModel\CharDscpUnspentAttrib.cs" />
+    <Compile Include="CharRepository\CharAttributes.cs" />
+    <Compile Include="CharRepository\CharDisciplines.cs" />
+    <Compile Include="CharRepository\CharJPGaining.cs" />
+    <Compile Include="CharRepository\CharRepositoryException.cs" />
+    <Compile Include="CharRepository\ICharAttributes.cs" />
+    <Compile Include="CharRepository\ICharDisciplines.cs" />
+    <Compile Include="CharRepository\ICharJPGaining.cs" />
+    <Compile Include="CoreModel\CoreDscpAttribRequir.cs" />
+    <Compile Include="CoreModel\CoreDscpNormalRequir.cs" />
+    <Compile Include="CoreModel\CoreDscpSpec.cs" />
+    <Compile Include="CoreModel\CoreDscpSpecArea.cs" />
+    <Compile Include="CoreModel\CoreModellerException.cs" />
+    <Compile Include="CoreModel\CoreOneAttrib.cs" />
+    <Compile Include="GeneralModel\CharOneTrunkEntity.cs" />
+    <Compile Include="CoreModel\CoreOneDscp.cs" />
+    <Compile Include="CoreModel\CoreOneDscpType.cs" />
+    <Compile Include="CoreModel\CoreOneJPNormLevel.cs" />
+    <Compile Include="CoreModel\CoreOneJPSchema.cs" />
+    <Compile Include="CoreModel\CoreOneJPSpecLevel.cs" />
+    <Compile Include="CoreModel\CoreOneRaceDetails.cs" />
+    <Compile Include="CoreModel\CoreOneSizeDef.cs" />
+    <Compile Include="CoreModel\ICoreOneDscp.cs" />
+    <Compile Include="CoreRepository\CoreAttribsRacesSizesRepo.cs" />
+    <Compile Include="GeneralRepository\GeneralBenefException.cs" />
+    <Compile Include="GeneralRepository\GeneralBeneficMediator.cs" />
+    <Compile Include="CoreRepository\CoreDisciplinesTypesRepo.cs" />
+    <Compile Include="CoreRepository\CoreJPLevelsSchemasRepo.cs" />
+    <Compile Include="CoreRepository\CoreRepositoryExcetipon.cs" />
+    <Compile Include="GeneralRepository\GeneralReviewTrunkRepo.cs" />
+    <Compile Include="CoreRepository\ICoreAttribsRacesSizes.cs" />
+    <Compile Include="CoreRepository\ICoreDisciplinesTypes.cs" />
+    <Compile Include="CoreRepository\ICoreJPLevelsSchemas.cs" />
+    <Compile Include="GeneralRepository\GeneralRepositoryException.cs" />
+    <Compile Include="GeneralRepository\IGeneralReviewCharacterTrunk.cs" />
+    <Compile Include="Database\DataAccess.cs" />
+    <Compile Include="Database\DataAccessException.cs" />
+    <Compile Include="Database\OneDBTransactionEntity.cs" />
+    <Compile Include="ManagerWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManagerWindow.Designer.cs">
+      <DependentUpon>ManagerWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewConfigAndHelp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewConfigAndHelp.Designer.cs">
+      <DependentUpon>ReviewConfigAndHelp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ReviewWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewWindow.Designer.cs">
+      <DependentUpon>ReviewWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\IManageCharactService.cs" />
+    <Compile Include="Service\IReviewCharactService.cs" />
+    <Compile Include="Service\ManageCharactService.cs" />
+    <Compile Include="Service\ManageCharactServException.cs" />
+    <Compile Include="Service\ReviewCharactService.cs" />
+    <Compile Include="ReviewCreateCharWindow.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ReviewCreateCharWindow.Designer.cs">
+      <DependentUpon>ReviewCreateCharWindow.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSideAttribEnchance.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageSideAttribEnchance.Designer.cs">
+      <DependentUpon>ManageSideAttribEnchance.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSideDisciplRiseSpec.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageSideDisciplRiseSpec.Designer.cs">
+      <DependentUpon>ManageSideDisciplRiseSpec.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSideDsciplNew.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageSideDsciplNew.Designer.cs">
+      <DependentUpon>ManageSideDsciplNew.cs</DependentUpon>
+    </Compile>
+    <Compile Include="ManageSideJP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ManageSideJP.Designer.cs">
+      <DependentUpon>ManageSideJP.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="ManagerWindow.resx">
+      <DependentUpon>ManagerWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewConfigAndHelp.resx">
+      <DependentUpon>ReviewConfigAndHelp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ReviewWindow.resx">
+      <DependentUpon>ReviewWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="ReviewCreateCharWindow.resx">
+      <DependentUpon>ReviewCreateCharWindow.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageSideAttribEnchance.resx">
+      <DependentUpon>ManageSideAttribEnchance.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageSideDisciplRiseSpec.resx">
+      <DependentUpon>ManageSideDisciplRiseSpec.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageSideDsciplNew.resx">
+      <DependentUpon>ManageSideDsciplNew.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ManageSideJP.resx">
+      <DependentUpon>ManageSideJP.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Documentation\" />
+    <Folder Include="HelperPics\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <PropertyGroup>
+    <PostBuildEvent>
+    </PostBuildEvent>
+  </PropertyGroup>
+  <Import Project="..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets" Condition="Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\System.Data.SQLite.Core.1.0.111.0\build\net46\System.Data.SQLite.Core.targets'))" />
+  </Target>
+</Project>

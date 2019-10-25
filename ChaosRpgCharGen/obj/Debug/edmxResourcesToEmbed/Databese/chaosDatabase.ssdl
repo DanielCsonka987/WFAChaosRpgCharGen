@@ -1,0 +1,191 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="chasDB.Store" Provider="System.Data.SQLite.EF6" ProviderManifestToken="data source=C:\Users\AdminDaniel\source\repos\ChaosRpgCharGen\ChaosRpgCharGen\chaos_system_database.db" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'main.chaos_attrib_JPschema' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="chaos_attrib_JPschema">
+          <Property Name="JPschema" Type="integer" />
+          <Property Name="levelJP_intervalDown" Type="integer" />
+          <Property Name="levelJP_intervalUp" Type="integer" />
+          <Property Name="levelJP_modifier" Type="integer" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'main.chaos_attribute_stats' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="chaos_attribute_stats">
+          <Property Name="attrib_id" Type="integer" />
+          <Property Name="atrib_name" Type="varchar" MaxLength="30" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'main.chaos_discipline_attribute' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="chaos_discipline_attribute">
+          <Property Name="discipl_id" Type="integer" />
+          <Property Name="discipl_attribId" Type="integer" />
+          <Property Name="discipl_JPschema" Type="integer" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'main.chaos_discipline_requrement' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="chaos_discipline_requrement">
+          <Property Name="discipl_id" Type="integer" />
+          <Property Name="discipl_requirNormGroup" Type="integer" />
+          <Property Name="discipl_requirId" Type="integer" />
+          <Property Name="discipl_requirTypeDef" Type="blob" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'main.chaos_discipline_specAreas' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="chaos_discipline_specAreas">
+          <Property Name="discipl_id" Type="integer" />
+          <Property Name="spec_areaGroup" Type="integer" />
+          <Property Name="spec_areaDescr" Type="varchar" MaxLength="45" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'main.chaos_discipline_specialis' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="chaos_discipline_specialis">
+          <Property Name="discipl_id" Type="integer" />
+          <Property Name="discipl_specialReqGroup" Type="integer" />
+          <Property Name="discipl_specialReqId" Type="varchar" MaxLength="3" />
+          <Property Name="discipl_specialLevel" Type="integer" />
+          <Property Name="discipl_specialThisMustRise" Type="blob" />
+          <Property Name="spec_requestIType" Type="integer" />
+        </EntityType>-->
+  <EntityType Name="chaos_discipline_type">
+    <Key>
+      <PropertyRef Name="type_id" />
+    </Key>
+    <Property Name="type_id" Type="integer" Nullable="false" />
+    <Property Name="type_name" Type="varchar" MaxLength="40" />
+    <Property Name="type_inheritylBeneficial" Type="blob" />
+  </EntityType>
+  <EntityType Name="chaos_disciplines">
+    <Key>
+      <PropertyRef Name="discipl_id" />
+    </Key>
+    <Property Name="discipl_id" Type="integer" Nullable="false" />
+    <Property Name="discipl_name" Type="varchar" MaxLength="100" />
+    <Property Name="discipl_type" Type="integer" />
+    <Property Name="discipl_studyReqImprt" Type="blob" />
+    <Property Name="discipl_studiab" Type="blob" />
+  </EntityType>
+  <EntityType Name="chaos_JPLevels_normal">
+    <Key>
+      <PropertyRef Name="discipl_level" />
+    </Key>
+    <Property Name="discipl_level" Type="integer" Nullable="false" />
+    <Property Name="level_attribJPSchemaAdditioner" Type="integer" />
+    <Property Name="level_studyPracticePenalty" Type="integer" />
+    <Property Name="discipl_levelAveragePrice" Type="integer" />
+    <Property Name="discipl_levelBeneficPrice" Type="integer" />
+    <Property Name="discipl_attribLevelFeedback" Type="integer" />
+  </EntityType>
+  <EntityType Name="chaos_JPLevels_special">
+    <Key>
+      <PropertyRef Name="discipl_specLevel" />
+    </Key>
+    <Property Name="discipl_specLevel" Type="integer" Nullable="false" />
+    <Property Name="discipl_levelSpecAveragePrice" Type="integer" />
+    <Property Name="discipl_levelSpecBenefPrice" Type="integer" />
+    <Property Name="discipl_requirLevelRising" Type="integer" />
+    <Property Name="discipl_requirAttribRising" Type="integer" />
+    <Property Name="discipl_attribSpecLevelFeedback" Type="integer" />
+  </EntityType>
+  <EntityType Name="chaos_raceBase_attribRestraints">
+    <Key>
+      <PropertyRef Name="race_id" />
+    </Key>
+    <Property Name="race_id" Type="integer" Nullable="false" />
+    <Property Name="raceName" Type="varchar" MaxLength="15" />
+    <Property Name="physiqueMax" Type="integer" />
+    <Property Name="efficiencyMax" Type="integer" />
+    <Property Name="conscienceMax" Type="integer" />
+    <Property Name="essencyMax" Type="integer" />
+    <Property Name="basicSize" Type="integer" />
+  </EntityType>
+  <EntityType Name="chaos_raceSizes">
+    <Key>
+      <PropertyRef Name="basicSize_id" />
+    </Key>
+    <Property Name="basicSize_id" Type="integer" Nullable="false" />
+    <Property Name="sizeDescr" Type="varchar" MaxLength="20" />
+    <Property Name="speedQuicknessBasic" Type="integer" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'main.character_attribEnchance' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="character_attribEnchance">
+          <Property Name="charact_id" Type="integer" />
+          <Property Name="attrib_echanceIndex" Type="integer" />
+          <Property Name="discipl_index1" Type="integer" />
+          <Property Name="discipl_index2" Type="integer" />
+          <Property Name="attrib_id" Type="integer" />
+          <Property Name="discipl_pointFeedbackType" Type="integer" />
+          <Property Name="discipl_pointFromSpec" Type="blob" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'main.character_attribStats' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="character_attribStats">
+          <Property Name="charact_id" Type="integer" />
+          <Property Name="attrib_id" Type="integer" />
+          <Property Name="attrib_basicPoint" Type="integer" />
+        </EntityType>-->
+  <EntityType Name="character_chosenDiscipl">
+    <Key>
+      <PropertyRef Name="discipl_index" />
+    </Key>
+    <Property Name="discipl_index" Type="integer" Nullable="false" />
+    <Property Name="charact_id" Type="integer" />
+    <Property Name="discipl_id" Type="integer" />
+    <Property Name="discipl_chosenAttrib" Type="integer" />
+    <Property Name="discipl_requirNormal" Type="integer" />
+    <Property Name="discipl_notation" Type="varchar" MaxLength="100" />
+  </EntityType>
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'main.character_chosenLevel' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="character_chosenLevel">
+          <Property Name="discipl_index" Type="integer" />
+          <Property Name="discipl_metorated" Type="blob" />
+          <Property Name="discipl_level" Type="integer" />
+          <Property Name="discipl_levelFinalJP" Type="integer" />
+          <Property Name="discipl_hasThereAttrPointFromThis" Type="blob" />
+          <Property Name="discipl_isThisPointSpend" Type="blob" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'main.character_chosenSpec' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="character_chosenSpec">
+          <Property Name="discipl_specid" Type="integer" />
+          <Property Name="discipl_index" Type="integer" />
+          <Property Name="discipl_requirSpec" Type="integer" />
+          <Property Name="discipl_specialAreaGroup" Type="integer" />
+          <Property Name="discipl_specialDescr" Type="varchar" MaxLength="100" />
+          <Property Name="discipl_level" Type="integer" />
+          <Property Name="discipl_levelFinalJP" Type="integer" />
+          <Property Name="discipl_hasThereAttrPointFromThis" Type="blob" />
+        </EntityType>-->
+  <!--Errors Found During Generation:
+warning 6013: The table/view 'main.character_collectJP' does not have a primary key defined and no valid primary key could be inferred. This table/view has been excluded. To use the entity, you will need to review your schema, add the correct keys, and uncomment it.
+        <EntityType Name="character_collectJP">
+          <Property Name="charact_id" Type="integer" />
+          <Property Name="jp_index" Type="integer" />
+          <Property Name="character_collectedJP" Type="integer" />
+        </EntityType>-->
+  <EntityType Name="character_trunk">
+    <Key>
+      <PropertyRef Name="charact_id" />
+    </Key>
+    <Property Name="charact_id" Type="integer" Nullable="false" />
+    <Property Name="race_id" Type="integer" />
+    <Property Name="character_name" Type="varchar" MaxLength="30" />
+    <Property Name="character_descr" Type="varchar" MaxLength="100" />
+    <Property Name="beneficial_discipl" Type="integer" />
+    <Property Name="character_realSize" Type="integer" />
+    <Property Name="character_realSpeed" Type="integer" />
+    <Property Name="character_basicJP" Type="integer" />
+    <Property Name="lastupdate_timestamp" Type="datetime" />
+  </EntityType>
+  <EntityContainer Name="chasDBStoreContainer">
+    <EntitySet Name="chaos_discipline_type" EntityType="Self.chaos_discipline_type" store:Type="Tables" />
+    <EntitySet Name="chaos_disciplines" EntityType="Self.chaos_disciplines" store:Type="Tables" />
+    <EntitySet Name="chaos_JPLevels_normal" EntityType="Self.chaos_JPLevels_normal" store:Type="Tables" />
+    <EntitySet Name="chaos_JPLevels_special" EntityType="Self.chaos_JPLevels_special" store:Type="Tables" />
+    <EntitySet Name="chaos_raceBase_attribRestraints" EntityType="Self.chaos_raceBase_attribRestraints" store:Type="Tables" />
+    <EntitySet Name="chaos_raceSizes" EntityType="Self.chaos_raceSizes" store:Type="Tables" />
+    <EntitySet Name="character_chosenDiscipl" EntityType="Self.character_chosenDiscipl" store:Type="Tables" />
+    <EntitySet Name="character_trunk" EntityType="Self.character_trunk" store:Type="Tables" />
+  </EntityContainer>
+</Schema>
